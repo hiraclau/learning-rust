@@ -1,0 +1,9 @@
+[package]
+name = "learn_rust"
+version = "0.0.1"
+authors = ["Claudio Hirakawa <claudiokazuohi@gmail.com>"]
+edition = "2021"
+[dependencies]
+regex = "1"
+num = "0.4.0"
+
