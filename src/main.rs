@@ -23,10 +23,16 @@ fn main() {
     }
   );
 
+  let result = module::match_cpf_state(&purported_cpf);
+  println!("{}", result);
+
   let natural_number = 63;
   println!("natural_number: {}", natural_number);
   let prime_factors = module::prime_factors(natural_number);  
   for prime_factor in prime_factors {
     print!("{} ", prime_factor);
   }
+
+  let sum = 0.1 + 0.2;
+  println!("sum: {}", sum);
 }

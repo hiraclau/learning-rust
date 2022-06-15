@@ -44,6 +44,24 @@ pub fn check_cpf(purported_cpf: &str) -> bool {
   purported_first_digit == first_digit && purported_second_digit == second_digit
 }
 
+pub fn match_cpf_state(cpf: &str) -> &str {
+  let ninth_digit = &cpf[8..9];
+  let state = match ninth_digit {
+    "0" => "Rio Grande do Sul",
+    "1" => "Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul e Tocantins",
+    "2" => "Amazonas, Pará, Roraima, Amapá, Acre e Rondônia",
+    "3" => "Ceará, Maranhão e Piauí",
+    "4" => "Paraíba, Pernambuco, Alagoas e Rio Grande do Norte",
+    "5" => "Bahia e Sergipe",
+    "6" => "Minas Gerais",
+    "7" => "Rio de Janeiro e Espírito Santo",
+    "8" => "São Paulo",
+    "9" => "Paraná e Santa Catarina",
+    _ => "Não identificado",
+  };
+  state
+}
+
 pub fn prime_factors(natural_number: i32) -> Vec<i32> {
   let mut prime_factors: Vec<i32> = Vec::new();
   let mut prime_factor: i32 = 2;
